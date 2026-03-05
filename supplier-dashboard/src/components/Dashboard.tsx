@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Supplier } from '../types/supplier'
 
-const API_BASE = 'http://localhost:5000'
+const API_BASE = 'https://andritz-test-dashboard.onrender.com'
 
 const COLUMNS: { label: string; key: keyof Supplier }[] = [
   { label: 'ID',              key: 'id' },
