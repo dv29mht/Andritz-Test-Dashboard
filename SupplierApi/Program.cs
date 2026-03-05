@@ -9,7 +9,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("ViteDev", policy =>
     {
         policy
-            .WithOrigins("http://localhost:5173")
+            .WithOrigins("http://localhost:5173", "https://dv29mht.github.io")
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
