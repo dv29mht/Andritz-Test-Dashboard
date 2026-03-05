@@ -1,0 +1,6 @@
+# Ignore these folders everywhere
+**/node_modules/
+**/.cache/
+**/dist/
+**/bin/
+**/obj/
