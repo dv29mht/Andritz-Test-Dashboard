@@ -1,10 +1,6 @@
-# Node
-node_modules/
-dist/
-
-# .NET
-bin/
-obj/
-
-# Environment variables
-.env
+# Ignore these folders everywhere
+**/node_modules/
+**/.cache/
+**/dist/
+**/bin/
+**/obj/
