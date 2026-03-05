@@ -1,7 +1,7 @@
 import { useState, FormEvent, ChangeEvent } from 'react'
 import { Supplier } from '../types/supplier'
 
-const API_BASE = 'http://localhost:5000'
+const API_BASE = 'https://andritz-test-dashboard.onrender.com'
 
 type FormState = Omit<Supplier, 'id'>
 
