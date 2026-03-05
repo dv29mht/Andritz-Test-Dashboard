@@ -38,7 +38,8 @@ app.UseCors("ViteDev");
 app.MapGet("/api/suppliers", async (SupplierDb db) =>
     await db.Suppliers
             .OrderByDescending(s => s.RegistrationDate)
-            .ToListAsync());
+            .ToListAsync())
+            .RequireCors("ViteDev");
 
 app.MapPost("/api/suppliers", async (Supplier supplier, SupplierDb db) =>
 {
@@ -46,6 +47,7 @@ app.MapPost("/api/suppliers", async (Supplier supplier, SupplierDb db) =>
     db.Suppliers.Add(supplier);
     await db.SaveChangesAsync();
     return Results.Created($"/api/suppliers/{supplier.Id}", supplier);
-});
+})
+.RequireCors("ViteDev");
 
 app.Run();
